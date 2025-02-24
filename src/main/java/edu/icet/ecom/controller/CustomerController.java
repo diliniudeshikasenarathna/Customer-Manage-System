@@ -38,4 +38,14 @@ public class CustomerController {
     public void updateCustomer(@RequestBody Customer customer){
         service.updateCustomer(customer);
     }
+
+    @GetMapping("/search-customer-by-id/{id}")
+    public Customer searchCustomer(@PathVariable Integer id){
+        return service.searchCustomerById(id);
+    }
+
+    @GetMapping("/search-by-name/{name}")
+    public List<Customer> searchByCustomerName(@PathVariable String name){
+        return service.findByName(name);
+    }
 }

@@ -8,6 +8,7 @@ public interface CustomerService {
     void addCustomer(Customer customer);
     void deleteCustomer(int id);
     void updateCustomer(Customer customer);
-    Customer searchCustomer(int id);
+    Customer searchCustomerById(Integer id);
     List<Customer> getAll();
+    List<Customer> findByName(String name);
 }
